@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Конвертер длины</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="gg.js"></script>
+    <script>
+         function convertLength2() {
+            var km = document.getElementById('km').value;
+            var meters = km * 1000;
+            var cm = km * 100000;
+
+            document.getElementById('meters').value = meters;
+            document.getElementById('cm').value = cm;
+        }
+        function convertLength1() {
+            var meters = document.getElementById('meters').value;
+            var km = meters / 1000;
+            var cm = meters * 100;
+
+            document.getElementById('km').value = km;
+            document.getElementById('cm').value = cm;
+        }
+        function convertLength() {
+            var cm = document.getElementById('cm').value;
+            var meters = cm / 100;
+            var km = cm / 100000;
+
+            document.getElementById('meters').value = meters;
+            document.getElementById('km').value = km;
+        }
+    </script>
+     <style>
+        label {
+            display: block;
+        }
+    </style>    
+</head>
+<body>
+    <h1>Конвертер длины</h1>
+    <p>Результаты преобразования:</p>
+
+    <!-- <label ></label>Введите значение </label> -->
+
+</div>
+    <label for="cm"> Сантиметры:</label>
+    <input type="number" id="cm" onchange="convertLength()">
+</div>
+</div>
+    <label for="meters">Метры:</label>
+    <input type="text" id="meters" onchange="convertLength1()">
+</div>
+</div>
+    <label for="km">Километры:</label>
+    <input type="text" id="km" onchange="convertLength2()">
+</div>
+</body>
+</html>
